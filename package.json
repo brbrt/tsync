@@ -10,6 +10,7 @@
   "license": "MIT",
   "devDependencies": {
     "nconf": "^0.7.1",
+    "q": "^1.4.1",
     "winston": "^1.0.1"
   }
 }
