@@ -1,19 +1,22 @@
+var path = require('path');
 var winston = require('winston');
+
+var config = require('./config.js');
 
 module.exports = initLogger();
 
 function initLogger() {
-    var config = {
+    var winstonConfig = {
         transports: [
             new (winston.transports.Console)({ 
                 level: 'debug' 
             }),
             new (winston.transports.File)({ 
-                filename: 'somefile.log' // TODO: set this
+                filename: path.join(config('syncfolder'), 'tsync.log')
             })
         ]
     };
 
-    return new (winston.Logger)(config);
+    return new (winston.Logger)(winstonConfig);
 }
 
