@@ -15,6 +15,8 @@ nconf.argv().env();
 
 // Provide default values for settings not provided above.
 nconf.defaults({
-    syncfolder: '/tmp'
+    workingdir: '/tmp/tsync',
+    sourcedir: 'torrent-watch',
+    dbuploader: '~/Dropbox-Uploader/dropbox_uploader.sh'
 });
 

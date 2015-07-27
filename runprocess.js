@@ -31,8 +31,10 @@ function run(proc, args) {
         log.debug('Process returned with code: ' + code);
 
 		if (code === 0) {
+            log.debug('Process output is: ' + out);
 			deferred.resolve(out);
 		} else {
+            log.debug('Process error is: ' + err);
 			deferred.reject(err);
 		}
 	});

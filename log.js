@@ -12,7 +12,7 @@ function initLogger() {
                 level: 'debug' 
             }),
             new (winston.transports.File)({ 
-                filename: path.join(config('syncfolder'), 'tsync.log')
+                filename: path.join(config('workingdir'), 'tsync.log')
             })
         ]
     };
