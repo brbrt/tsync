@@ -17,6 +17,8 @@ nconf.argv().env();
 nconf.defaults({
     workingdir: '/tmp/tsync',
     sourcedir: 'torrent-watch',
+    filenamepattern: '.*\.torrent$'
+    targetdir: '/tmp/target',
     dbuploader: '~/Dropbox-Uploader/dropbox_uploader.sh'
 });
 
